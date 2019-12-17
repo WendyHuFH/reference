@@ -1,6 +1,6 @@
 # reference
 practice about reference(&amp;)
-C++中 引用&与取地址&的区别
+一. C++中 引用&与取地址&的区别
 一个是用来传值的 一个是用来获取首地址的
 
 &(引用)==>出现在变量声明语句中位于变量左边时,表示声明的是引用.
@@ -27,3 +27,9 @@ int function(int &i)
 vector<int> vec1(10,1);  //initialize vec1: 10 elements, every element's value is 1
 vector<int> &vec2 = vec1; // vec2 is  reference to vec1
 vector<int> *vec3 = &vec2; //vec3 is addresss of vec1 and vec2
+
+二. 
+1、引用在创建时必须初始化，引用到一个有效对象；而指针在定义时不必初始化，可以在定义后的任何地方重新赋值。
+2、指针可以是NULL，引用不行
+3、引用貌似一个对象的小名，一旦初始化指向一个对象，就不能将其他对象重新赋值给该引用，这样引用和原对象的值都会被更改。
+4、引用的创建和销毁不会调用类的拷贝构造函数和析构函数。
